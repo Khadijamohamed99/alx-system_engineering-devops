@@ -17,4 +17,4 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Khadija Mohamed** - [Khadija Mohamed](https://github.com/Khadija Mohamed)
+* **Khadija Mohamed** - [Khadija Mohamed](https://github.com/Khadijamohamed99)
