@@ -6,7 +6,7 @@ ensure  => present,
 content =>"
 #ssh client configuration
 host*
-IdentityFile ~/.ssh/school
+IdentityFile ~/.ssh/school_rsa
 PasswordAuthentication no
 ",
 }
