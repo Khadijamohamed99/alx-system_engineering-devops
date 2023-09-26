@@ -9,5 +9,4 @@ content =>"
 	host*
 	IdentityFile ~/.ssh/school_rsa
 	PasswordAuthentication no
-
 }
