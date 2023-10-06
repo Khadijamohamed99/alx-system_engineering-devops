@@ -34,10 +34,14 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-listen myserver
+frontend  khadijaa_frontend
         bind *:80
-        bind *:443 ssl crt /etc/haproxy/ssl/www.nuux.tech.pem
-        redirect scheme https code 301 if !{ ssl_fc }
+        mode http
+        bind *:443 ssl crt /etc/haproxy/certs/www.khadija.tech.pem
+        redirect scheme https if !{ ssl_fc }
+        default_backend khadijaa_backend
+
+backend khadijaa_backend
         balance roundrobin
         server 388069-web-01 54.84.8.186:80 check
         server 388069-web-02 54.167.170.67:80 check
