@@ -38,11 +38,7 @@ Upstart script to keep the application running on server reboots.
   app.
 
 * **6. Deploy it**
-  * [gunicorn.conf](./gunicorn.conf): Configuration file for an Upstart script that starts a
+  * [gunicorn.service](./gunicorn.service): Configuration file for an Upstart script that starts a
   Gunicorn process bounded to port 5003 that serves the content from task 5.
   * The Gunicorn process spawns three worker processes and logs errors to `/tmp/airbnb-error.log`,
   access to `/tmp/airbnb-access.log`.
-
-* **7. No service interruption**
-  * [4-reload_gunicorn_no_downtime](./4-reload_gunicorn_no_downtime): Bash script that gracefully
-  reloads Gunicorn.
